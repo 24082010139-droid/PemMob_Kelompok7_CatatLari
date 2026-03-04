@@ -51,8 +51,7 @@
         android:inputType="textPersonName"
         android:paddingVertical="12dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#FFF100"
-        android:background="@drawable/bg_edit_text" />
+        android:backgroundTint="#FFF100" />
 
     <!-- Field Email -->
     <TextView
@@ -70,8 +69,7 @@
         android:inputType="textEmailAddress"
         android:paddingVertical="12dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#FF9800"
-        android:background="@drawable/bg_edit_text" />
+        android:backgroundTint="#FF9800"/>
 
     <!-- Field Password -->
     <TextView
@@ -89,8 +87,7 @@
         android:inputType="textPassword"
         android:paddingVertical="12dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="#FF9800"
-        android:background="@drawable/bg_edit_text" />
+        android:backgroundTint="#FF9800" />
 
     <!-- Tombol Sign Up -->
     <Button
