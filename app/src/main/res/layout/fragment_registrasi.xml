@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <!-- Header RUNTRACK -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LariLariLa"
+        android:textColor="#FF9800"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mari buat Akun!"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Judul Form Registrasi -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTRASI"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Field Nama Lengkap -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NAMA LENGKAP"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contoh: Axel Arwanov Firdaus Mahaputra"
+        android:inputType="textPersonName"
+        android:paddingVertical="12dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FFF100"
+        android:background="@drawable/bg_edit_text" />
+
+    <!-- Field Email -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMAIL"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contoh: email@contoh.com"
+        android:inputType="textEmailAddress"
+        android:paddingVertical="12dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FF9800"
+        android:background="@drawable/bg_edit_text" />
+
+    <!-- Field Password -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PASSWORD"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Minimal 6 karakter"
+        android:inputType="textPassword"
+        android:paddingVertical="12dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#FF9800"
+        android:background="@drawable/bg_edit_text" />
+
+    <!-- Tombol Sign Up -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="SIGN UP"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#FF9800"
+        app:cornerRadius="8dp"
+        android:stateListAnimator="@null" />
+
+    <!-- Opsional: tautan ke halaman login -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sudah punya akun? Masuk"
+        android:textColor="#FF9800"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>
