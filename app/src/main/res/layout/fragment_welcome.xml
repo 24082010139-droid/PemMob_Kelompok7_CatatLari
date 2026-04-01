@@ -7,7 +7,7 @@
     android:background="@color/cream"
     android:padding="24dp"
     android:id="@+id/welcome"
-    tools:context=".Welcome">
+    tools:context=".WelcomeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -58,6 +58,7 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:text="Login"
@@ -68,6 +69,7 @@
             android:layout_marginBottom="12dp" />
 
         <Button
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:backgroundTint="@color/grey"
