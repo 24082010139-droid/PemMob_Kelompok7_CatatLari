@@ -17,12 +17,12 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginBottom="24dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="20dp"
             android:backgroundTint="@color/orange"
             android:contentDescription="Running icon"
-            android:src="@drawable/ic_runner" />
+            android:src="@mipmap/ic_launcher_larilarilaa" />
 
         <TextView
             android:layout_width="wrap_content"
