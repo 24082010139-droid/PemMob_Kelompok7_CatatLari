@@ -27,10 +27,16 @@ class Beranda : Fragment() {
             binding.catatLari.setOnClickListener {
                 findNavController().navigate(R.id.action_beranda_to_catatLari)
             }
+
+            binding.btnProfile.setOnClickListener {
+                findNavController().navigate(R.id.action_beranda_to_profile)
+            }
         }
 
         override fun onDestroyView() {
             super.onDestroyView()
             _binding = null
         }
+
+
     }

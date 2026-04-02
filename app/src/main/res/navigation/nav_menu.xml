@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_menu"
+    app:startDestination="@id/welcome">
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.ubermensch.larilari.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_registerFragment"
+            app:destination="@id/registrasi" />
+        <action
+            android:id="@+id/action_welcome_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrasi"
+        android:name="com.ubermensch.larilari.Registrasi"
+        android:label="Registrasi" >
+        <action
+            android:id="@+id/action_registrasi_to_beranda"
+            app:destination="@id/beranda" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.ubermensch.larilari.Login"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_login_to_beranda2"
+            app:destination="@id/beranda" />
+    </fragment>
+    <fragment
+        android:id="@+id/beranda"
+        android:name="com.ubermensch.larilari.Beranda"
+        android:label="fragment_beranda"
+        tools:layout="@layout/fragment_beranda" >
+        <action
+            android:id="@+id/action_beranda_to_catatLari"
+            app:destination="@id/catatLari" />
+        <action
+            android:id="@+id/action_beranda_to_profile"
+            app:destination="@id/profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/catatLari"
+        android:name="com.ubermensch.larilari.CatatLari"
+        android:label="CatatLari" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.ubermensch.larilari.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

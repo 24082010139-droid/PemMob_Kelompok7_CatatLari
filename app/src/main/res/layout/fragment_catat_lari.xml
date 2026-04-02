@@ -96,7 +96,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:background="@color/grey"
+                    android:background="@color/white"
                     android:padding="10dp"
                     android:hint="dd/mm/yyyy"
                     android:textColorHint="@color/orange"
@@ -124,7 +124,7 @@
                     android:paddingTop="8dp"
                     android:paddingEnd="14dp"
                     android:paddingStart="14dp"
-                    android:background="@color/grey">
+                    android:background="@color/white">
 
                     <EditText
                         android:id="@+id/etJarak"
@@ -166,7 +166,7 @@
                     android:paddingTop="8dp"
                     android:paddingEnd="14dp"
                     android:paddingStart="14dp"
-                    android:background="@color/grey">
+                    android:background="@color/white">
 
                     <EditText
                         android:id="@+id/etDurasi"
