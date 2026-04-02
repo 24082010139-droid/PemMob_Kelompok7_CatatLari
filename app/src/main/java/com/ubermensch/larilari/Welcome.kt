@@ -37,7 +37,7 @@ class WelcomeFragment : Fragment() {
 
         binding.btnLogin.setOnClickListener {
             findNavController().navigate(
-                WelcomeFragmentDirections.actionWelcomeFragmentToLoginFragment())
+                WelcomeFragmentDirections.actionWelcomeToLogin())
         }
 
         binding.btnRegister.setOnClickListener {
