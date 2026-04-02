@@ -45,6 +45,7 @@
         android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/etNama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Contoh: Axel Arwanov Firdaus Mahaputra"
@@ -63,6 +64,7 @@
         android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Contoh: email@contoh.com"
@@ -81,6 +83,7 @@
         android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Minimal 6 karakter"
@@ -91,6 +94,7 @@
 
     <!-- Tombol Sign Up -->
     <Button
+        android:id="@+id/btnSignup"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:text="SIGN UP"
@@ -103,6 +107,7 @@
 
     <!-- Opsional: tautan ke halaman login -->
     <TextView
+        android:id="@+id/tvLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sudah punya akun? Masuk"

@@ -5,55 +5,58 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
+import com.ubermensch.larilari.databinding.FragmentLoginBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [Login.newInstance] factory method to
- * create an instance of this\ fragment.
- */
 class Login : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Login.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Login().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Handling tombol Login
+        binding.btnLogin.setOnClickListener {
+            val emailUser = binding.etEmail.text.toString()
+            val passwordUser = binding.etPassword.text.toString()
+
+            if (emailUser.isEmpty() || passwordUser.isEmpty()) {
+                Toast.makeText(requireContext(), "Silahkan masukkan email/password, bro!", Toast.LENGTH_SHORT).show()
+            } else {
+                // Cek password
+                if (passwordUser != "123456") {
+                    Toast.makeText(requireContext(), "Password Anda salah!", Toast.LENGTH_SHORT).show()
+                } else {
+                    // Membuat objek User dari data class (Data tersimpan di variabel userLogin)
+                    val userLogin = User(email = emailUser, password = passwordUser)
+
+                    Toast.makeText(requireContext(), "Login Berhasil sebagai ${userLogin.email}", Toast.LENGTH_SHORT).show()
+
+                    // Berpindah ke Beranda
+                    findNavController().navigate(R.id.action_login_to_beranda2)
                 }
             }
+        }
+
+        // Handling klik "Belum punya akun? Daftar"
+        binding.tvGoToRegister.setOnClickListener {
+            findNavController().navigate(R.id.registrasi)
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
